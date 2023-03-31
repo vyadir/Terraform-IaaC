@@ -15,6 +15,7 @@ resource "aws_instance" "mi_servidor" {
               EOF
 }
 
+# exponer el puerto
 resource "aws_security_group" "mi_grupo_de_seguridad" {
   name = "mi-servidor_sg"
   ingress {
@@ -22,7 +23,6 @@ resource "aws_security_group" "mi_grupo_de_seguridad" {
     description = "Acceso al puerto 8080 desde el exterior"
     from_port = 8080
     to_port = 8080
-    protocol = "TCP"
-    
+    protocol = "TCP"  
   } 
 }
