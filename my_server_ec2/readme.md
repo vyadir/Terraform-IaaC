@@ -1,0 +1,1 @@
+Creación de un server de ubuntu en AWS EC2
